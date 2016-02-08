@@ -13,7 +13,7 @@
 <div class="homet">
 <div class="home">
 
-<h3><b>{{event.eventtype|title }}</b> </h3><hr/>
+<h2><b>{{event.eventtype|title }}</b> </h2><hr/>
 
 </div>
 
@@ -31,39 +31,28 @@
 <div class="homeld">
 <center><h4><b>Event Schedule</b></h4></center>
 <div class="homed">
-<div class=container-fluid">
- <div class="row">
-     <div class="col-md-4"><h4 align="left"><b>&nbsp;&nbsp;&nbsp;Post On  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b></div></h4>
-    <div class="col-md-8"><h4 style="font-size:20px">{{ event.date_created|date:"d M Y" }}</h4></div>
- </div>
-
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b>&nbsp;&nbsp;&nbsp;Event On  &nbsp;&nbsp;&nbsp;&nbsp;</b>:</div></h4>
-    <div class="col-md-8"><h4 style="font-size:20px" >{{  event.date_event }}</h4></div> 
+<div class='row'>
+<div class="col-md-11">
+     <div class="col-md-5"><h4><b>Post On  </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px">{{ event.date_created|date:"d M Y" }}</h4></div>
+   <div class="col-md-5"><h4><b>Duration </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px" >{{  event.duration|time:"H" }} Hours</h4></div> 
+   <div class="col-md-5"><h4><b>Event On  </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-6"><h4 style="font-size:20px" >{{  event.date_event }}</h4></div> 
+   
 </div>
-
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b>&nbsp; &nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px" >{{  event.duration|time:"H" }} Hours</h4></div> 
-</div>
-
 </div></div> 
 </div>
 
 <br>
 <div class="homed">
-<div class=container-fluid>
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b>  Dresscode&nbsp;:</b></div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px" >{{  event.dresscode }} </h4></div> 
+<div class='row'>
+<div class="col-md-11">
+   <div class="col-md-5"><h4><b>Dresscode </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px" >{{  event.dresscode }} </h4></div> 
+   <div class="col-md-5"><h4> <b>Place </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px" >{{  event.place|title }}</h4></div> 
 </div>
-
-
-<div class="row">
-   <div class="col-md-4"><h4 align="left"> <b>Place&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></div></h4>
-    <div class="col-md-8"><h4 style="font-size:20px" >{{  event.place }}</h4></div> 
-</div>
-
 </div>
 </div>
 <a href="/event/enquiry/{{  event.user}}/"><h2 class='btn btn-default btn-block' style="background-color:#8FC73E;color:#ffffff;font-size:15px">{{ event.user}}</h2></a> <br>
@@ -72,13 +61,14 @@
  {% for document in document %}
 <div class="homepd">
 <div class="homep"> 
-<a href=#event style="color:#428BCA">   <h4 style="padding-left:20px" data-toggle="modal" id='rim' data-target="#event">  <img src="{{ document.docfile.url }}" class="img-circle" id="circle" alt="{% static 'assets/img/find_user.png' %}" width="100px" height="100px"/>&nbsp;&nbsp;{{document.firstname}}&nbsp;{{ document.lastname}}</h4></a>
+<a href=#event style="color:#428BCA">   <h4 style="padding-left:20px" data-toggle="modal" id='event' data-target="#event">
+<img src="{{ document.docfile.url }}" class="img-circle" id="circle" alt="{% static 'assets/img/find_user.png' %}" width="100px" height="100px"/>&nbsp;&nbsp;{{document.firstname}}&nbsp;{{ document.lastname}}</h4></a>
                       {% endfor %}
 
                         {% else %}
 <div class="homepd">
 <div class="homep"> 
-                     <h4 style="padding-left:20px"> <img id="blah" src="{% static 'assets/img/find_user.png' %}" class="img-circle" id="circle"   alt="your selected item" style="border:1px groove;"/></img>&nbsp;&nbsp;&nbsp;&nbsp;Unknown</h4>              {% endif %}
+                     <h4 style="padding-left:20px"> <img id="blah" src="{% static 'assets/img/find_user.png' %}" class="img-circle" id="circle"   alt="your selected item" width="100px" height="100px" style="border:1px groove;"/></img>&nbsp;&nbsp;&nbsp;&nbsp;Unknown</h4>              {% endif %}
  </div>
 <p style="padding-left:112px;">Share on social media</p><center>
 <a href="https://www.facebook.com/sharer/sharer.php?u=http://vinayvit.pythonanywhere.com/" target="_blank"><img src="{% static 'img/facebook.png' %}" class="img-inline-responsive"/></a> 
@@ -90,7 +80,7 @@
 </div><div class='col-sm-1'></div>
 </div>
 {% for document in document %}
- <div class="modal fade" id=" event" role="dialog">
+ <div class="modal fade" id="event" role="dialog">
 <div class="modal-dialog modal-sm">
       <div class="modal-content">
          <div class="modal-header">

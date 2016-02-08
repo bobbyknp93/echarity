@@ -57,19 +57,21 @@ function resumeDiv() {
 
 {% for event in event %}
 		<div class='col-sm-3'>
-			<div class="thumbnail" style="width:100%; height:240px;">
-<a href="/event/{{ event.pk }}/" > <div style="color:white;padding-top:4px; background-color:#E10985; height:30px"><center><b>{{  event.eventtype|title|truncatewords:10 }}</b></center></div></a>
+			<div class="thumbnail" style="width:100%; height:230px;">
+<a href="/event/{{ event.pk }}/" > <div style="color:white;padding-top:4px; background-color:#E10985; height:32px"><center><b>{{  event.eventtype|title|truncatewords:10 }}</b></center></div></a>
 
 {% if event.snap %}
 
-		   	<a href="/event/{{ event.pk }}/"> <img src="{{ event.snap.url }}" class="img-responsive"   alt="image not found" style="width:100%; height:125px;"></img></a>
+		   	<a href="/event/{{ event.pk }}/"> <img src="{{ event.snap.url }}" class="img-responsive"   alt="image not found" style="width:100%; height:135px;"></img></a>
            {% else %}
                        <img id="blah" src="{% static 'assets/img/find_user.png' %}"  alt="your selected item" style="width:100%; height:100px;"/>
 
                 {% endif %}
-			<a href='/event/{{ event.pk }}/' style="color:#9697A2"> <span class="glyphicon glyphicon-calendar"></span>{{  event.date_event|date:"d M Y"}}<br>
+		<div class='row'>	<a href='/event/{{ event.pk }}/' style="color:#B44899">		<div class='col-sm-6'>
 <i class="fa fa-home"></i>
-{{  event.place }}</a> 
+{{  event.place }} </div>		<div class='col-sm-5'>
+<i class="fa fa-calendar"></i> {{  event.date_event|date:"d M Y"}}</a></div></div> 
+
 {% if event.docfile %}
                                 <img src="{{ event.docfile.url }}"class="img-circle" id="circle" alt="not" width="160px" height="150px"/>                      {% endif %}
 <a href="/event/enquiry/{{ event.user}}/"  class='btn btn-warning btn-block' style="height:35px;background-color:#A22382; color:white" role="button">
@@ -117,7 +119,7 @@ function resumeDiv() {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On : {{  event.date_event|date:"d M Y" }}</h5></a><hr>{% endfor %}
 </div>
 </body></div>
-</div><br>
+</div>
 </div></div>
 
 </html>

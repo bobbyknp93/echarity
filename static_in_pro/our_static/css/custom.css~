@@ -12,8 +12,14 @@
 /*==============================================
     GENERAL  STYLES    
     =============================================*/
+@font-face {
+  font-family: 'Myriad Apple';
+  src: url('../fotter/fonts/MYRIAAMI.TTF');
+  src: local('../fotter/fonts/MYRIAAMI.TTF')
+} 
+
 body {
-    font-family: 'Open Sans', sans-serif;
+font-family: "Myriad Apple", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
  #wrapper {
@@ -68,7 +74,7 @@ p {
 }
    .noti-box {
 min-height: 100px;
-padding: 20px;
+padding: 12px;
 }
 
     .noti-box .icon-box {
@@ -93,10 +99,9 @@ font-size: 40px;
     -webkit-border-radius: 50px;
 -moz-border-radius: 50px;
 border-radius: 50px;
-
 }
 
-    .bg-color-green {
+.bg-color-green {
 background-color: #00CE6F;
 color: LightPink;
 }

@@ -1,6 +1,7 @@
 {% extends "dash.html" %}
 {% load crispy_forms_tags %}        
 {% load i18n %} 
+{% load staticfiles %} 
 {% block content %} 
 <body>
 <div class="container-fluid" class="responsive" style="height: auto; width: auto; background-color: grey">
@@ -11,7 +12,7 @@
 <div class="col-md-2">
   </div>
 <div class="col-md-8" style="padding:1px;border:1px groove SteelBlue; background-color:white">
-<center><b><h2>INSTANT MESSAGE</h2><b></center><hr>
+<center><b><h2>Instant Message</h2><b></center><hr>
 <div class="row">
       <div class="col-sm-2"></div>
       <div class="col-sm-9">
@@ -21,7 +22,7 @@
 <table>
 {{ form|crispy }}
 </table>
-<center><input type="submit" class="btn btn-info btn-lg" value="{% trans "Send Message" %} &raquo;"/></center>
+<center><input type="image" src='{% static "img/msge.png" %}' /></center>
 </form></div></div></div></div><br><br>
 </div><br></div>
 

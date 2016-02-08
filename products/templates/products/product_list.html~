@@ -3,7 +3,7 @@
 {% block content %}
 {% block jumbotron2 %}
 <body><br> 
- <div class="container-fluid" style="color:grey; background-color:#8FC73E; height:120px"><br>
+ <div class="container-fluid" style="color:grey; background-color:#8FC73E; height:115px"><br>
  <p style="font-size:40px; padding-left:70px;padding-top:30px; color:white;"> DONATE</p>
    </div>   
  <div id="wrapper" class="responsive-inline" style="groove #8FC73E; background-color:white">
@@ -26,7 +26,7 @@
 
 {% endif %}
 <div class="container-fluid">
-<a href='/products/{{ object.pk }}/'> <h3 style="padding:10px; color:#969696">{{ object.title|truncatechars:30 }}</h3></a>
+<a href='/products/{{ object.pk }}/'> <h2 style="color:#969696">{{ object.title|truncatechars:30 }}</h2></a>
 
 <div class="container-fluid">
 <div class="row" style="padding-bottom:10px">

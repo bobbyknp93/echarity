@@ -21,7 +21,7 @@
 <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
    <!-- CUSTOM STYLES-->
 <link href="{% static 'css/style1.css' %}" rel="stylesheet" type="text/css" />
-<link href="{% static 'fotter/css/main.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
 <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" type="text/css" />  
   <!-- FONTAWESOME STYLES-->
 <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@
                         <a href="{% url 'list' %}"><i class="fa fa-shopping-cart fa-2x"></i> DONATE ITEM</a>
                     </li>
 		<li>
-                        <a href="/products/service/ "><i class="fa fa-bullhorn fa-2x"></i> OFFER SERVICE</a>
+                        <a href="/offer/service/"><i class="fa fa-bullhorn fa-2x"></i> OFFER SERVICE</a>
                     </li>
 
  			<li>

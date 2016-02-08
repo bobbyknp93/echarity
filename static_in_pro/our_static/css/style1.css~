@@ -1,6 +1,14 @@
 <!---------------------------------home----------------------------------->
+@font-face {
+  font-family: 'Myriad Apple';
+  src: url('../fotter/fonts/MYRIAAMI.TTF');
+  src: local('../fotter/fonts/MYRIAAMI.TTF')
+} 
 body {
 font-family: "Myriad Apple", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  src: url('../fotter/fonts/MYRIAAMI.TTF');
+  src: local('../fotter/fonts/MYRIAAMI.TTF')
+
 }
 
 #myBODY1 {
@@ -56,6 +64,8 @@ background-color:white;
       text-decoration:none;
       color: white;
       font-family: "Myriad Apple";
+      src: url('../fotter/fonts/MYRIAAMI.TTF');
+
    }
 
     .mtb
@@ -64,7 +74,7 @@ background-color:white;
 
  .navbar-collapse
  {
-        padding-top: 1%;
+        padding-top: 1.5%;
         padding-left: auto;}
 
 #div1{
@@ -72,7 +82,7 @@ padding-top:10px;
 
 }
 
-.img-circle{
+.img-circle1{
  height:100px;
 width:100px;
 }

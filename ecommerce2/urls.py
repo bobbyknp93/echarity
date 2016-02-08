@@ -6,6 +6,7 @@ from dashing.utils import router
 from registration.backends.default.views import RegistrationView
 from django_messages.views import *
 from dashboard.views import *
+
 urlpatterns = [
     # Examples:
     url(r'^messages/', include('django_messages.urls')),
@@ -21,7 +22,6 @@ urlpatterns = [
  # Dashboard:
     url(r'^dashboard/$', 'dashboard.views.dashboard', name='dashboard'),   
     url(r'^profiles/$', 'dashboard.views.profiles', name='profiles'),
-    #url(r'^dashboard/', include(router.urls)),
  # Product:
      url(r'^$', 'products.views.home', name='home'),
     url(r'^products/', include('products.urls')),
@@ -36,7 +36,6 @@ urlpatterns = [
  # Admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.urls')),
-    url(r'^profile/', include('user_profile.urls')),
     # Django JET URLS
     url(r'^jet/', include('jet.urls', 'jet')), 
     url(r'^tour/$', 'ecommerce2.views.tour', name='tour'),

@@ -13,7 +13,7 @@
 <div class="homet">
 <div class="home">
 
-<h3><b>{{object.title|title }}</b> </h3><hr/>
+<h2><b>{{object.title|title }}</b> </h2><hr/>
 
 </div>
 
@@ -30,42 +30,34 @@
 <div class='col-sm-4'>
 <div class="homeld">
 <center><h4><b>Item Details</b></h4></center>
-<div class="homed">
-<div class=container-fluid">
- <div class="row">
-     <div class="col-md-4"><h4 align="left"><b>&nbsp;&nbsp;&nbsp;Post On &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b></div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px">{{ object.date_created|date:"d M Y" }}</h4></div>
- </div>
+<div class="homed"> 
 
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b>&nbsp;&nbsp;&nbsp;Expire On &nbsp;&nbsp;&nbsp;</b>:</div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px" >{{object.expire_date|date:"d M Y"}}</h4></div> 
-</div>
+<div class='row'>
+<div class="col-md-10">
+     <div class="col-md-5"><h4><b>Post On </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px">{{ object.date_created|date:"d M Y" }}</h4></div>
+ 
 
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b>&nbsp;&nbsp; Zipcode &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px" >{{  object.zip_Code }}</h4></div> 
-</div>
 
+   <div class="col-sm-5"><h4><b>Expire On </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px">{{object.expire_date|date:"d M Y"}}</h4></div> 
+
+   <div class="col-md-5"><h4><b>Zipcode</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px" >{{  object.zip_Code }}</h4></div> 
 </div></div> 
-</div>
-
+</div> </div> 
 <br>
 <div class="homed">
-<div class=container-fluid>
-<div class="row">
-   <div class="col-md-4"><h4 align="left"><b> Available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></div></h4>
-    <div class="col-md-4"><h4 style="font-size:20px" >{{ object.quantity }} Unit</h4></div> 
-</div>
+<div class='row'>
+<div class="col-md-10">
+   <div class="col-md-5"><h4><b> Available </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-5"><h4 style="font-size:20px" >{{ object.quantity }} Unit</h4></div> 
 
+   <div class="col-md-5"><h4> <b>Location</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4></div>
+    <div class="col-md-6"><h4 style="font-size:20px" >{{ object.address }}</h4></div> 
+</div></div>
+</div> 
 
-<div class="row">
-   <div class="col-md-4"><h4 align="left"> <b>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></div></h4>
-    <div class="col-md-8"><h4 style="font-size:20px" >{{ object.address }}</h4></div> 
-</div>
-
-</div>
-</div>
 <a href="/products/enquiry/{{ object.user}}/"><h2 class='btn btn-default btn-block' style="background-color:#8FC73E;color:#ffffff;font-size:15px">{{object.user}}</h2></a> <br>
 {% if document %}
 
@@ -78,7 +70,7 @@
                         {% else %}
 <div class="homepd">
 <div class="homep"> 
-                     <h4 style="padding-left:20px"> <img id="blah" src="{% static 'assets/img/find_user.png' %}" class="img-circle" id="circle"   alt="your selected item" style="border:1px groove;"/></img>&nbsp;&nbsp;&nbsp;&nbsp;Unknown</h4>              {% endif %}
+                     <h4 style="padding-left:20px"> <img id="blah" src="{% static 'assets/img/find_user.png' %}" class="img-circle" id="circle"   alt="your selected item" width="100px" height="100px"style="border:1px groove;"/></img>&nbsp;&nbsp;&nbsp;&nbsp;Unknown</h4>              {% endif %}
  </div>
 <p style="padding-left:112px;">Share on social media</p><center>
 <a href="https://www.facebook.com/sharer/sharer.php?u=http://vinayvit.pythonanywhere.com/products/" target="_blank"><img src="{% static 'img/facebook.png' %}" class="img-inline-responsive"/></a> 
